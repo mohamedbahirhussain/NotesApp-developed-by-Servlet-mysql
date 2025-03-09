@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Display the username -->
+        <h1>Welcome, <span id="username">${sessionScope.username}</span></h1>
+        <h3>Your Notes</h3>
+
+        <!-- Link to add a new note -->
+        <a href="addNote.jsp" class="add-note-btn">Add New Note</a>
+
+        <ul class="notes-list">
+            <!-- Iterate through the notes fetched in the servlet -->
+            <c:forEach var="note" items="${notes}">
+                <li class="note-item">
+                    <h4>${note.title}</h4>
+                    <p>${note.content}</p>
+                    <!-- Link to edit the note -->
+                    <a href="editNote.jsp?id=${note.id}" class="edit-note-btn">Edit</a>
+                    <!-- Link to delete the note -->
+                    <a href="DeleteNoteServlet?id=${note.id}" class="delete-note-btn">Delete</a>
+                </li>
+            </c:forEach>
+        </ul>
+
+        <br>
+        <!-- Link to logout -->
+        <a href="logout" class="logout-btn">Logout</a>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

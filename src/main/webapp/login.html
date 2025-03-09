@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Todo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="login-container">
+        <h2 class="login-title">Login</h2>
+        <form action="LoginServlet" method="post" class="login-form">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required><br>
+            
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required><br>
+            
+            <input type="submit" value="Login">
+        </form>
+        <a href="register.html" class="register-link">Don't you have an account? Register</a>
+    </div>
+</body>
+</html>
