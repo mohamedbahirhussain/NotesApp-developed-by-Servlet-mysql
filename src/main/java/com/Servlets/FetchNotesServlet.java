@@ -32,7 +32,7 @@ public class FetchNotesServlet extends HttpServlet {
             }
             
             request.setAttribute("notes", notes);
-            RequestDispatcher dispatcher = request.getRequestDispatcher("dashboard.jsp");
+            RequestDispatcher dispatcher = request.getRequestDispatcher("dashboard.html");
             dispatcher.forward(request, response);
             
         } catch (Exception e) {

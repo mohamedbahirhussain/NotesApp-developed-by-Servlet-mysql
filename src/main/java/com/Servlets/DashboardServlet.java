@@ -50,7 +50,7 @@ public class DashboardServlet extends HttpServlet {
                     }
                     // Set notes as a request attribute for use in the JSP page
                     request.setAttribute("notes", notes);
-                    request.getRequestDispatcher("/dashboard.jsp").forward(request, response);  // Make sure it's dashboard.jsp
+                    request.getRequestDispatcher("/dashboard.jsp").forward(request, response);  
                 }
             }
         } catch (SQLException | ClassNotFoundException e) {

@@ -28,7 +28,7 @@ public class EditNoteServlet extends HttpServlet {
             int result = ps.executeUpdate();
             
             if (result > 0) {
-                response.sendRedirect("dashboard.html"); // Redirect to dashboard after editing
+                response.sendRedirect("dashboard.html");
             } else {
                 response.getWriter().write("Error editing note.");
             }
